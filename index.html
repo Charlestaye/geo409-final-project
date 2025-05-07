@@ -159,7 +159,7 @@
     </div>
     <div class="container">
       <div class="left-column">
-        <h3> Description</h3>
+        <h3> Introduction</h3>
 		<p>
 			The powerpoint shows a list of Campuses desginasted as "Tree Campus USAs" but what does that mean? 
 			The Arbor Day Foundation which gives out this designation has 5 requirments: Have a tree advisory committee, campus tree plan, an tree program with dedicated annual expenditures, observe arbor day, and have a service learning project.
@@ -173,13 +173,32 @@
         </p>
 
         <p>
-          The goal of this project is to highlight 6 colleges/universities that are Tree Campuses in Georgia.
+          As such the goal of this project is to highlight 6 colleges/universities that are Tree Campuses in Georgia.
 		  This will be done through maps and a Cesium Powerpoint giving a closer look at these campuses.
         </p>
+		<h3> Methodology</h3>
+		<p>
+			In order to carry out the goal of this prroject and to fufill the requirments of my assignment I sought out lidar data for Georgia.
+			The data was pulled from <a href="https://apps.nationalmap.gov/lidar-explorer/#/">USGS Lidar Explorer</a> and using LAStools to turn LAZ files to LAS files.
+			I downloaded 20 las files split across the 6 different colleges. These files were then colorized using NAIP 2023 data from the USDA and put into CesiumIon.
+			The addtional visualizations were created from data sources in the citations section using ARCGis Pro.
+		  </p>
 
+		  <p>
+			Though a seemingly straightfoward process there was a lot of struggle in the completion of the project.
+			A major hiccup in the process was when when visualizing the LAS data. When adding the data to the map instead of appearing in Georgia it would appear in Alabama.
+			This was due to the downloaded data not having a coordinate system and then when a coordinate system was applied it sent the data to Alabama for some reason.
+			Eventually after research I found the correct coordinate system for the data and it the data succesfully appeared in Georgia.
+		  </p>
+
+		  <p>
+			The second issue in the process was colorzing the data. The issue came from the extent of the data being too large leading to an error.
+			This was a frustrating issue at first but had the simple solution of downsizing the amount of data which ultiamtely led to lower processing times and properly colorized data.
+		  </p>
+		<h3> Citations</h3>
         <p>
           Visualizations created from lidar data provided by
-          <a href="https://apps.nationalmap.gov/lidar-explorer/#/">USGS Lidar Explorer</a> in ArcGIS Pro. Additional sources of data from
+           in ArcGIS Pro. Additional sources of data from 
           <a href="https://www.mrlc.gov/data?f%5B0%5D=category%3ATree%20Canopy">MRLC</a>, May, 2025.
         </p>
 
